@@ -82,24 +82,4 @@ spec:
     targetPort: 8080
   selector:
     app: realtime
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: realtimeapp-ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
-spec:
-  tls:
-  - hosts:
-    - real.baeke.info
-    secretName: real-baeke-info-tls
-  rules:
-  - host: real.baeke.info
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: realtimeapp
-          servicePort: 80
+

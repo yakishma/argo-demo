@@ -22,7 +22,7 @@ spec:
       # Extra parameters to set (same as setting through values.yaml, but these take precedence)
       parameters:
       - name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
-        value: mydomain.example.com
+        value: yakishcorp.com  ######
 
       # Release name override (defaults to application name)
       releaseName: guestbook
@@ -35,16 +35,16 @@ spec:
         ingress:
           enabled: true
           path: /
-          hosts:
-            - mydomain.example.com
+          hosts:  
+            - yakishcorp.com   
           annotations:
             kubernetes.io/ingress.class: nginx
             kubernetes.io/tls-acme: "true"
           labels: {}
           tls:
-            - secretName: mydomain-tls
+            - secretName: yakishcorp-com
               hosts:
-                - mydomain.example.com
+                - yakishcorp.com
 
     # kustomize specific config
     kustomize:
