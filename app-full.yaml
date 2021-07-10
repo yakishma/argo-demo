@@ -34,7 +34,7 @@ spec:
       values: |
         ingress:
           enabled: true
-          path: ./
+          path: /
           hosts:  
             - yakishcorp.com   
           annotations:
